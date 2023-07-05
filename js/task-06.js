@@ -7,8 +7,12 @@ function onInput(evt) {
 
   if (inputVal.length !== id) {
     inputEl.classList.add("invalid");
-  } else {
+  }
+  if (inputVal.length === id) {
     inputEl.classList.remove("invalid");
     inputEl.classList.add("valid");
+  }
+  if (inputVal === "") {
+    inputEl.classList.remove("invalid", "valid");
   }
 }
