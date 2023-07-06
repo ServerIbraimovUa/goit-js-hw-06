@@ -21,20 +21,21 @@ function onCreateClick(evt) {
 
 destroyBtn.addEventListener("click", onDestroyBtn);
 
+function onDestroyBtn() {
+  boxEl.innerHTML = "";
+  const inputVal = control.querySelector("input");
+  inputVal.value = "";
+}
 function createBoxes(amount) {
   const arr = [];
-  let step = 0;
+  let step = 30;
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
-    div.style.width = `${30 + step}px`;
-    div.style.height = "30px";
+    div.style.width = `${step}px`;
+    div.style.height = `${step}px`;
     arr.push(div);
+    step += 10;
   }
   boxEl.append(...arr);
-}
-
-function onDestroyBtn() {
-  boxEl.innerHTML = "";
-  inputVal = "";
 }
