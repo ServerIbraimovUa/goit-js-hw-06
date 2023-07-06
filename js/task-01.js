@@ -7,8 +7,8 @@ const listEl = document.querySelector("#categories");
 console.log(`Number of categories: ${[...listEl.children].length}`);
 
 [...listEl.children].forEach((item) => {
-  const title = item.firstChild;
-  const items = item.lastChild;
+  const title = item.firstElementChild;
+  const items = item.lastElementChild;
   console.log(`Category: ${title.textContent}`);
   console.log(`Elements: ${items.length}`);
 });
