@@ -8,7 +8,7 @@ console.log(`Number of categories: ${[...listEl.children].length}`);
 
 [...listEl.children].forEach((item) => {
   const title = item.firstElementChild;
-  const items = item.lastElementChild;
+  const items = item.lastElementChild.children;
   console.log(`Category: ${title.textContent}`);
   console.log(`Elements: ${items.length}`);
 });
